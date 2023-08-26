@@ -1,6 +1,11 @@
-"use strict";
 console.log('Hello World');
-const x = 3;
-let y = false;
-//   z sonradan kullanilacak
-let z;
+const button = document.getElementById('submit');
+const a = document.getElementById('input1')! as HTMLInputElement;
+const b = document.getElementById('input2')! as HTMLInputElement;
+const result = document.getElementById('result');
+function add(a: number, b: number) {
+    return a + b;
+}
+button.addEventListener('click', function () {
+    result.innerText = `${add(+a.value, +b.value)}`;
+});
