@@ -33,3 +33,18 @@ myTuple = [13.4, false, 'Hello World'];
 let arrTuples;
 arrTuples = [[1, 'Mark'], [2, 'Anthony']];
 arrTuples.push([3, 'Ethan']);
+console.log(0 /* Color.Red */);
+console.log(100 /* Color.Green */);
+console.log(105 /* Color.Blue */);
+console.log(106 /* Color.Yellow */);
+console.log("XS" /* Tshirt.XSmall */);
+//? Mix Enum
+var Mixed;
+(function (Mixed) {
+    Mixed[Mixed["Red"] = 0] = "Red";
+    Mixed[Mixed["Green"] = 1] = "Green";
+    Mixed["Blue"] = "Mavi";
+    Mixed["Yellow"] = "Sari";
+    Mixed[Mixed["Magenta"] = 120] = "Magenta";
+    Mixed[Mixed["Brown"] = 121] = "Brown";
+})(Mixed || (Mixed = {}));

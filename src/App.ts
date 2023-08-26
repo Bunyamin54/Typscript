@@ -57,3 +57,41 @@ arrTuples = [[1, 'Mark'], [2, 'Anthony']]
 arrTuples.push([3, 'Ethan'])
 
 //? Enum 
+
+const enum Color {
+
+    Red,
+    Green = 100,
+    Blue = Green +5,
+    Yellow
+}
+console.log(Color.Red)
+console.log(Color.Green)
+console.log(Color.Blue)
+console.log(Color.Yellow)
+
+//? String Enum
+
+ const enum Tshirt {
+
+    XSmall = 'XS',
+    Small = ' S',
+    Medium = 'M'
+}
+
+console.log(Tshirt.XSmall)
+
+//? Mix Enum
+
+enum Mixed{
+  Red, 
+  Green,
+  Blue = 'Mavi',
+  Yellow = 'Sari',
+  Magenta = 120,
+  Brown,
+
+}
+
+//? const basina koyarsak karisk yapi yerine sade cikti verir. 
+
