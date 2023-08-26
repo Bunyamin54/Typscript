@@ -44,54 +44,76 @@
 // ? Tuples sabit sayida ve sabit type sayi tutmamizi saglar ;
 
 
-let myTuple: [number, boolean, string]
+// let myTuple: [number, boolean, string]
 
-myTuple = [13.4, false, 'Hello World']
+// myTuple = [13.4, false, 'Hello World']
 
-//? Tuple Array
+// //? Tuple Array
 
-let arrTuples : [number, string][];
+// let arrTuples : [number, string][];
 
-arrTuples = [[1, 'Mark'], [2, 'Anthony']]
+// arrTuples = [[1, 'Mark'], [2, 'Anthony']]
 
-arrTuples.push([3, 'Ethan'])
+// arrTuples.push([3, 'Ethan'])
 
-//? Enum 
+// //? Enum 
 
-const enum Color {
+// const enum Color {
 
-    Red,
-    Green = 100,
-    Blue = Green +5,
-    Yellow
-}
-console.log(Color.Red)
-console.log(Color.Green)
-console.log(Color.Blue)
-console.log(Color.Yellow)
+//     Red,
+//     Green = 100,
+//     Blue = Green +5,
+//     Yellow
+// }
+// console.log(Color.Red)
+// console.log(Color.Green)
+// console.log(Color.Blue)
+// console.log(Color.Yellow)
 
-//? String Enum
+// //? String Enum
 
- const enum Tshirt {
+//  const enum Tshirt {
 
-    XSmall = 'XS',
-    Small = ' S',
-    Medium = 'M'
-}
+//     XSmall = 'XS',
+//     Small = ' S',
+//     Medium = 'M'
+// }
 
-console.log(Tshirt.XSmall)
+// console.log(Tshirt.XSmall)
 
-//? Mix Enum
+// //? Mix Enum
 
-enum Mixed{
-  Red, 
-  Green,
-  Blue = 'Mavi',
-  Yellow = 'Sari',
-  Magenta = 120,
-  Brown,
+// enum Mixed{
+//   Red, 
+//   Green,
+//   Blue = 'Mavi',
+//   Yellow = 'Sari',
+//   Magenta = 120,
+//   Brown,
 
-}
+// }
 
 //? const basina koyarsak karisk yapi yerine sade cikti verir. 
 
+//? unknown typ belirtmemiz lazm 
+
+//! Any  & unknow
+
+let a : any = ' Hello'
+
+let b : number = a
+
+let c : unknown = 5
+
+let d : number = c as number   //? asotion yaparsak as number gibi hata ortadan kalkar
+
+let e : any = c
+
+
+//? Void donus tipi
+
+function myFunction ():void  {
+
+    console.log('Hello world')
+    return 3  // hata aliriz..
+}
