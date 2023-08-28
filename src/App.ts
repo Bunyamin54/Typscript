@@ -139,3 +139,14 @@
 // xyz = true
 
 // xyz = 3
+
+//* Aliasaes
+type Check = string | number
+
+let f : Check
+f = 0
+f = 'Merhaba'
+
+let g : string |  number
+let h : string | number
+let i : Check
