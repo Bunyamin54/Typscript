@@ -115,5 +115,5 @@ let e : any = c
 function myFunction ():void  {
 
     console.log('Hello world')
-    return 3  // hata aliriz..
+    // return 3  // hata aliriz.. icerisinde return almayan fonksiyonlar void ile yazilir.
 }
