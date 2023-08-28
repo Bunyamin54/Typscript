@@ -27,24 +27,95 @@
 // b.push('5')
 // b.push(5)
 // ? Tuples sabit sayida ve sabit type sayi tutmamizi saglar ;
-let myTuple;
-myTuple = [13.4, false, 'Hello World'];
-//? Tuple Array
-let arrTuples;
-arrTuples = [[1, 'Mark'], [2, 'Anthony']];
-arrTuples.push([3, 'Ethan']);
-console.log(0 /* Color.Red */);
-console.log(100 /* Color.Green */);
-console.log(105 /* Color.Blue */);
-console.log(106 /* Color.Yellow */);
-console.log("XS" /* Tshirt.XSmall */);
-//? Mix Enum
-var Mixed;
-(function (Mixed) {
-    Mixed[Mixed["Red"] = 0] = "Red";
-    Mixed[Mixed["Green"] = 1] = "Green";
-    Mixed["Blue"] = "Mavi";
-    Mixed["Yellow"] = "Sari";
-    Mixed[Mixed["Magenta"] = 120] = "Magenta";
-    Mixed[Mixed["Brown"] = 121] = "Brown";
-})(Mixed || (Mixed = {}));
+// let myTuple: [number, boolean, string]
+// myTuple = [13.4, false, 'Hello World']
+// //? Tuple Array
+// let arrTuples : [number, string][];
+// arrTuples = [[1, 'Mark'], [2, 'Anthony']]
+// arrTuples.push([3, 'Ethan'])
+// //? Enum 
+// const enum Color {
+//     Red,
+//     Green = 100,
+//     Blue = Green +5,
+//     Yellow
+// }
+// console.log(Color.Red)
+// console.log(Color.Green)
+// console.log(Color.Blue)
+// console.log(Color.Yellow)
+// //? String Enum
+//  const enum Tshirt {
+//     XSmall = 'XS',
+//     Small = ' S',
+//     Medium = 'M'
+// }
+// console.log(Tshirt.XSmall)
+// //? Mix Enum
+// enum Mixed{
+//   Red, 
+//   Green,
+//   Blue = 'Mavi',
+//   Yellow = 'Sari',
+//   Magenta = 120,
+//   Brown,
+// }
+//? const basina koyarsak karisk yapi yerine sade cikti verir. 
+//? unknown typ belirtmemiz lazm 
+//! Any  & unknow
+// let a : any = ' Hello'
+// let b : number = a
+// let c : unknown = 5
+// let d : number = c as number   //? asotion yaparsak as number gibi hata ortadan kalkar
+// let e : any = c
+// //? Void donus tipi
+// function myFunction ():void  {
+//     console.log('Hello world')
+// return 3  // hata aliriz.. icerisinde return almayan fonksiyonlar void ile yazilir.
+// }
+// //! sistemde bir hata gelirse "never" KULLANILIR.
+// //* union -- hem number hem string tutar.  Type  Type narrowing
+// function checkNumber (n:(string | number)) : string {
+//     if (typeof n === 'number') {
+//          n
+//     }else {
+//         n.
+//     }
+//      return 'Hello'
+// }
+// let xyz : string | number = 0;
+// xyz = 'Hello'
+// xyz = true
+// xyz = 3
+//* Aliasaes
+// type Check = string | number
+// let f : Check
+// f = 0
+// f = 'Merhaba'
+// let g : string |  number
+// let h : string | number
+// let i : Check
+//* String Literals
+// type pet = 'cat' | 'dog'
+// let pet1: pet= 'cat'
+// type Car =' BMW' | 'AUDI'
+// let car1: Car =' BMW'
+// let car2: Car ='AUDI'
+//* Intersection
+//*Object
+const car = {
+    make: 'Toyota',
+    model: 'Corolla',
+    year: 2020,
+    age(CurrentYear) {
+        console.log('age = ${CurrentYear-this.year}');
+    }
+};
+car.year = 2021;
+car.age(2023);
+let book1 = {
+    book_id: 1234,
+    book_name: "Lord of the Rings",
+    Author_Id: 1892,
+    Author_name: "J. R. R. Tolkien",
+};

@@ -141,12 +141,67 @@
 // xyz = 3
 
 //* Aliasaes
-type Check = string | number
+// type Check = string | number
 
-let f : Check
-f = 0
-f = 'Merhaba'
+// let f : Check
+// f = 0
+// f = 'Merhaba'
 
-let g : string |  number
-let h : string | number
-let i : Check
+// let g : string |  number
+// let h : string | number
+// let i : Check
+
+//* String Literals
+
+// type pet = 'cat' | 'dog'
+
+// let pet1: pet= 'cat'
+
+
+// type Car =' BMW' | 'AUDI'
+
+// let car1: Car =' BMW'
+// let car2: Car ='AUDI'
+
+//* Intersection
+//*Object
+
+const car: {
+    make:string,
+    model:string,
+    readonly year:number,
+    sunroof?:boolean
+    age (CurrentYear:number):void
+} = {
+    make :'Toyota',
+    model:'Corolla',
+    year: 2020,
+    age(CurrentYear:number) {
+        console.log('age = ${CurrentYear-this.year}')
+    }
+}
+
+ car.year = 2021
+ car.age(2023)
+// car.year = 2021  2021 //* read only ye atama yapilamaz.
+
+//Intersection
+
+  type Book = {
+    book_id: number;
+    book_name: string;
+  }
+    
+type Author = {
+    Author_Id: number;
+    Author_name: string;
+  }
+    
+type Intersected_type = Book & Author;
+    
+  let book1: Intersected_type = {
+    book_id: 1234,
+    book_name: "Lord of the Rings",
+    Author_Id: 1892,
+    Author_name: "J. R. R. Tolkien",
+  };
