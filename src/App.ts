@@ -99,21 +99,43 @@
 
 //! Any  & unknow
 
-let a : any = ' Hello'
+// let a : any = ' Hello'
 
-let b : number = a
+// let b : number = a
 
-let c : unknown = 5
+// let c : unknown = 5
 
-let d : number = c as number   //? asotion yaparsak as number gibi hata ortadan kalkar
+// let d : number = c as number   //? asotion yaparsak as number gibi hata ortadan kalkar
 
-let e : any = c
+// let e : any = c
 
 
-//? Void donus tipi
+// //? Void donus tipi
 
-function myFunction ():void  {
+// function myFunction ():void  {
 
-    console.log('Hello world')
+//     console.log('Hello world')
     // return 3  // hata aliriz.. icerisinde return almayan fonksiyonlar void ile yazilir.
-}
+// }
+ 
+
+// //! sistemde bir hata gelirse "never" KULLANILIR.
+
+// //* union -- hem number hem string tutar.  Type  Type narrowing
+
+// function checkNumber (n:(string | number)) : string {
+
+//     if (typeof n === 'number') {
+//          n
+//     }else {
+//         n.
+
+//     }
+//      return 'Hello'
+// }
+
+// let xyz : string | number = 0;
+// xyz = 'Hello'
+// xyz = true
+
+// xyz = 3
